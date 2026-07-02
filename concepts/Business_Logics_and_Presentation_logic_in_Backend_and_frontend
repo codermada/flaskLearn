@@ -1,0 +1,42 @@
+# How Frontend/Backend Relate to Business/Presentation Logic
+
+These concepts often overlap, but they describe different things:
+
+---
+
+## Typical Mapping
+
+### Frontend (user side)
+- Mainly handles **presentation logic**
+- Responsible for:
+  - Displaying data (UI rendering)
+  - Formatting information
+  - Handling user interactions
+- May include some **light logic** (e.g., form validation, UI state)
+
+---
+
+### Backend (server side)
+- Mainly handles **business logic**
+- Responsible for:
+  - Applying rules and decisions
+  - Processing and validating data
+  - Storing and retrieving data from databases or APIs
+
+---
+
+## Important Note
+
+The separation is **not strict**:
+
+- Business logic can exist in the frontend (e.g., simple calculations, basic validation)
+- Presentation logic can exist in the backend (e.g., formatting API responses or templates)
+
+---
+
+## Key Idea
+
+- Frontend vs Backend = **where the code runs**
+- Business vs Presentation logic = **what the code does**
+
+These two classifications are related but not the same.
