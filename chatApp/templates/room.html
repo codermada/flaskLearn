@@ -1,0 +1,40 @@
+{%extends "base.html" %} {% block content %}
+<div class="message-box">
+  <h2 class="chat-room">Room: {{ room }}</h2>
+  <div class="messages" id="messages"></div>
+  <div class="inputs">
+    <input
+      type="text"
+      rows="3"
+      placeholder="Type your message..."
+      id="message"
+      name="message"
+      class="form-control"
+    />
+    <button class="form-button" id="send-btn" onclick="sendMessage()">Send</button>
+  </div>
+</div>
+<script type="text/javascript">
+    let socketio = io();
+
+    const messagesDiv = document.getElementById('messages');
+    const createMessage = (name, message) => {
+        const messageDiv = document.createElement('div');
+        messageDiv.innerHTML = `<strong>${name} ${new Date().toLocaleTimeString()}:</strong> ${message}`;
+        messagesDiv.appendChild(messageDiv);
+    }
+    socketio.on('message', (data) => {
+        createMessage(data.name, data.message);
+        console.log(data.name, data.message);
+    });
+
+    const sendMessage = () => {
+        const messageInput = document.getElementById('message');
+        const message = messageInput.value;
+        if (message.trim() === '') return;
+        socketio.emit('message', { data:message });
+        messageInput.value = '';
+    }
+
+</script>
+{%endblock%}

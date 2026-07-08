@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+<div class="error-div" {%if errors %}style="display: block;"{% endif %}>
+  <ul class="error-list">
+    {% if errors %} {% for error in errors %}
+    <li class="error-item">{{ error }}</li>
+    {% endfor %} {% endif %}
+  </ul>
+</div>
+<form action="" method="post" class="form">
+  <h1 class="form-title">Welcome to the Chat App</h1>
+  <div class="name-div">
+    <label for="name" class="form-label">Enter your name:</label>
+    <input
+      type="text"
+      placeholder="Your name"
+      id="name"
+      name="name"
+      
+      value="{{name}}"
+      class="form-control"
+    />
+  </div>
+  <div class="join-div">
+    <label for="code" class="form-label">Enter room code:</label>
+    <input
+      type="text"
+      placeholder="Room code"
+      name="code"
+      value="{{code}}"
+     
+      class="form-control"
+    />
+    <button type="submit" class="form-button" name="join">Join Room</button>
+  </div>
+  <button class="form-button" name="create">Create Room</button>
+</form>
+{% endblock %}
