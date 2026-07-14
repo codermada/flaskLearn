@@ -11,3 +11,5 @@
 * [Creating a Chat App With Flask-SocketIO (2023)](https://youtu.be/AMp6hlA8xKA?si=MY0ZhQddZchLodmD)
 
 * [tip tap documentation](https://tiptap.dev/docs/editor/getting-started/install/react)
+
+* [Make A Basic Landing Page With Bootstrap and Bootswatch](https://youtu.be/DnjTN62I_qM?si=3wMAL_mL0icAQbYh)
