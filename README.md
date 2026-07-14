@@ -9,3 +9,5 @@
 * [Python Live Chat Room Tutorial Using Flask & SocketIO](https://youtu.be/mkXdvs8H7TA?si=4SdRFkPCXP521yPd)
 
 * [Creating a Chat App With Flask-SocketIO (2023)](https://youtu.be/AMp6hlA8xKA?si=MY0ZhQddZchLodmD)
+
+* [tip tap documentation](https://tiptap.dev/docs/editor/getting-started/install/react)
